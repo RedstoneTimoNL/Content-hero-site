@@ -15,23 +15,6 @@
             --bordercolor: #1F2937;
         }
 
-        .AboutUsExplaination {
-            color: var(--color-text-main);
-            font-size: 2em;
-        }
-
-        .AboutUsText {
-            color: var(--color-text-main);
-            font-size: 5em;
-        }
-
-        .AboutUs {
-            background-color: var(--color-primary-gradient);
-            padding: 2em;
-            text-align: center;
-            color: var(--color-text-main);
-        }
-
         .Footer {
             background-color: var(--color-primary);
             padding: 2em;
@@ -99,41 +82,34 @@
             margin: 0;
             padding: 0;
         }
-        
         header {
             background: var(--color-primary-gradient);
             text-align: center;
             padding: 1em 0;
         }
-
         nav {
             display: flex;
             justify-content: center;
             background-color: #333;
         }
-
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
         }
-
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
-
         .container {
             padding: 2em;
             text-align: center;
         }
-
         .fade-in {
             opacity: 0;
             animation: fadeIn 2s forwards;
         }
-
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -146,70 +122,50 @@
         <h1 class="Title">Content Hero</h1>
     </header>
     <nav>
-        <a href="#">🏠Home</a>
-        <a href="#" id="About">🤷‍♂️About</a>
-        <a href="#" id="MeetTheTeam">🧑🏻‍💻Meet The Team</a>
-        <a href="#">Projecten✅</a>
-        <a href="#" id="ContactUs">Contact📲</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Meet The Team</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
     </nav>
     <div class="container fade-in">
         <h2 class="TextLineBaseCSS fade-in">"The hero behind your digital success"</h2>
-    </div>
-    <div class="AboutUs">
-        <h1 class="SectionTitleText fade-in">About Us</h1>
-        <p class="AboutUsExplaination fade-in">Wij zijn een jong en dynamisch team dat met passie en vastberadenheid dit bedrijf is gestart als een schoolopdracht. Hoewel we nog maar een week bezig zijn, werken we hard om innovatieve en creatieve oplossingen te bieden. Onze missie is om te leren, te groeien en samen te werken aan projecten die een positieve impact hebben.</p>
-        <p class="AboutUsExplaination fade-in">Dankzij deze opdracht hebben we al veel geleerd en kijken we uit naar de kansen en uitdagingen die voor ons liggen. We zijn trots op wat we tot nu toe hebben bereikt en zijn enthousiast over de toekomst.</p>
     </div>
     <hr class="HRSpace"></hr>
     <h2 class="SectionTitleText fade-in">Meet the team</h2>
     <div class="MeetTheTeamDiv">
         <div class="TeamMember">
             <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 1">
-            <h1 class="TextLineBaseCSS">Marouane</h1>
-            <p>Designer and Marketing</p>
+            <h1 class="TextLineBaseCSS">Team Member 1</h1>
+            <p>Designer</p>
         </div>
         <div class="TeamMember">
             <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 2">
-            <h1 class="TextLineBaseCSS">Timo</h1>
-            <p>Developer and Designer</p>
+            <h1 class="TextLineBaseCSS">Team Member 2</h1>
+            <p>Developer</p>
         </div>
         <div class="TeamMember">
             <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 3">
-            <h1 class="TextLineBaseCSS">Sem</h1>
-            <p>Developer</p>
+            <h1 class="TextLineBaseCSS">Team Member 3</h1>
+            <p>Manager</p>
         </div>
     </div>
     <hr class="HRSpace"></hr>
+    <div class="Projects">
+        <h2 class="SectionTitleText fade-in">Geen projecten op dit moment</h2>
+    </div>
+    <hr class="HRSpace"></hr>
     <h2 class="SectionTitleText fade-in">Contact Us</h2>
-    <div class="ContactUs">
+    <div>
         <h1 class="ContactUsText">Mail: contenthero@gmail.com</h1>
         <h1 class="ContactUsText">Phone Number: +1 202-456-1111</h1>
-    </div class="ContactUs">
+    </div>
     <div class="Footer">
          <p>© 2025 ContentHero. All rights reserved.</p>
     </div>
 </body>
 <footer>
     <script src="scaletext.js"></script>
-    <script>
-        function setupSmoothScroll(buttonId, targetClassName) {
-    document.getElementById(buttonId).addEventListener('click', function() {
-        const targetElement = document.querySelector(`.${targetClassName}`);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            console.error(`Element with class "${targetClassName}" not found.`);
-        }
-    });
-}
-
-// Example usage
-document.addEventListener('DOMContentLoaded', function() {
-    setupSmoothScroll('About', 'AboutUs');;
-    setupSmoothScroll('MeetTheTeam', 'MeetTheTeamDiv');;
-    setupSmoothScroll('ContactUs', 'ContactUs');;
-});
-    </script>
 </footer>
 </html>
 
