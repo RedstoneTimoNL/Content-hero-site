@@ -8,12 +8,32 @@
         :root {
             --color-primary-gradient: linear-gradient(45deg, #3A5F85, #2686CA);
             --color-primary: #2680cafe;
-            --color-secondary: #0C2251;
+            --color-secondary: #02143b;
             --color-text-main: rgb(255, 255, 255);
             --color-text-Secondary: rgba(255, 255, 255, 0.433);
             --hr-color: #333;
             --bordercolor: #1F2937;
         }
+
+        /*/ New Css /*/
+
+        .projectbalk{
+        background-color: var(--color-primary);
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px;
+        box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        width:300px;
+    }
+        .projectbalk img{
+        width: 300px;
+        height: 300px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .projectbalk p{
+    height: 150px
+    }
 
         .ProjectItem {
             display: flex;
@@ -26,6 +46,12 @@
             background-color: var(--color-primary);
             border: var(--bordercolor);
             border-width: 5px;
+        }
+
+        .projecten{
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .Projects {
@@ -62,10 +88,22 @@
             border-width: 5px;
         }
 
+        .OpenButton {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
         .ContactUsText {
             color: var(--color-text-main);
             font-size: 2em;
             text-align: center;
+        }
+
+        .TitleText {
+            padding-top: 8%;
         }
 
         .HRSpace {
@@ -88,6 +126,9 @@
             color: var(--color-text-main);
             font-size: 2em;
             border-bottom: 0.2em solid var(--color-primary);
+            text-align: center;
+            padding-left: 15%;
+            padding-right: 15%;
         }
 
         .Title {
@@ -101,11 +142,16 @@
             background: var(--color-primary-gradient);
             margin: 0;
             padding: 0;
+            gap: 10%;
         }
         header {
             background: var(--color-primary-gradient);
             text-align: center;
             padding: 1em 0;
+            position: sticky;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
         }
         nav {
             display: flex;
@@ -140,47 +186,54 @@
 <body>
     <header>
         <h1 class="Title">Content Hero</h1>
+        <nav>
+            <a href="#">🏠Home</a>
+            <a href="#" id="AboutUsButton">🤷‍♂️About</a>
+            <a href="#" id="MeetTheTeamButton">🧑🏻‍💻Meet The Team</a>
+            <a href="#" id="ProjectsButton">✅Projects</a>
+            <a href="#" id="ContactUsButton">📲Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#">🏠Home</a>
-        <a href="#">🤷‍♂️About</a>
-        <a href="#">🧑🏻‍💻Meet The Team</a>
-        <a href="#">Services✅</a>
-        <a href="#">Contact📲</a>
-    </nav>
     <div class="container fade-in">
-        <h2 class="TextLineBaseCSS fade-in">"The hero behind your digital success"</h2>
+        <h2 class="TitleText TextLineBaseCSS fade-in">"The hero behind your digital success"</h2>
+    </div>
+    <hr class="HRSpace"></hr>
+    <h2 class="SectionTitleText fade-in">About Us</h2>
+    <div class="AboutUsDiv">
+        <p class="TextLineBaseCSS fade-in">Wij zijn een jong en dynamisch team dat met passie en vastberadenheid dit bedrijf is gestart als een schoolopdracht. Hoewel we nog maar een week bezig zijn, werken we hard om innovatieve en creatieve oplossingen te bieden. Onze missie is om te leren, te groeien en samen te werken aan projecten die een positieve impact hebben.</p>
     </div>
     <hr class="HRSpace"></hr>
     <h2 class="SectionTitleText fade-in">Meet the team</h2>
     <div class="MeetTheTeamDiv">
         <div class="TeamMember">
-            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 1">
-            <h1 class="TextLineBaseCSS">Sem</h1>
-            <p>Developer</p>
+            <img class="ShowCaseImage" src="https://placehold.co/300x300" alt="Team Member 1">
+            <h1 class="TextLineBaseCSS">Sam</h1>
+            <p>Designer</p>
         </div>
         <div class="TeamMember">
-            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 2">
-            <h1 class="TextLineBaseCSS">Marouane</h1>
+            <img src="https://placehold.co/300x300" alt="Team Member 2">
+            <h1 class="TextLineBaseCSS">Stijn</h1>
             <p>Developer, Designer</p>
         </div>
         <div class="TeamMember">
-            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 3">
+            <img src="https://placehold.co/300x300" alt="Team Member 3">
             <h1 class="TextLineBaseCSS">Timo</h1>
-            <p>Developer, Designer</p>
+            <p>CEO</p>
         </div>
     </div>
     <hr class="HRSpace"></hr>
     <h2 class="SectionTitleText fade-in">Projecten</h2>
-    <div class="Projects">
-        <div class="TeamMember">
-            <img src="GoodFood.png" alt="Good Food">
-            <h1 class="TextLineBaseCSS">Good Food</h1>
+    <div class="projecten">
+        <div class="projectbalk">
+            <h2>GoodFood Menu</h2>
+            <img src="GoodFood.png" alt="">
+            <P></P>
+            <a href="GoodFood.png" target="_blank"><button class="OpenButton">Openen</button></a>
         </div>
     </div>
     <hr class="HRSpace"></hr>
     <h2 class="SectionTitleText fade-in">Contact Us</h2>
-    <div>
+    <div class="ContactUs">
         <h1 class="ContactUsText">Mail: contenthero@gmail.com</h1>
         <h1 class="ContactUsText">Phone Number: +1 202-456-1111</h1>
     </div>
@@ -190,7 +243,28 @@
 </body>
 <footer>
     <script src="scaletext.js"></script>
+    <script>
+        function setupSmoothScroll(buttonId, targetClassName) {
+    document.getElementById(buttonId).addEventListener('click', function() {
+        const targetElement = document.querySelector(`.${targetClassName}`);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            console.error(`Element with class "${targetClassName}" not found.`);
+        }
+    });
+}
+
+// Example usage
+document.addEventListener('DOMContentLoaded', function() {
+    setupSmoothScroll('ContactUsButton', 'ContactUs');
+    setupSmoothScroll('ProjectsButton', 'Projects');
+    setupSmoothScroll('MeetTheTeamButton', 'MeetTheTeamDiv');
+    setupSmoothScroll('AboutUsButton', 'AboutUsDiv');
+});
+    </script>
 </footer>
 </html>
+
 
 
